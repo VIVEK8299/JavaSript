@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var car = function() {
+            this.speed = 30; //default
+        }
+        car.prototype.acc = function() {
+            this.speed += 40;
+        }
+        car.prototype.cspeed = function() {
+                console.log(this.speed);
+            }
+            //how we access or use these methods
+        var obj = new car;
+        obj.cspeed();
+        obj.acc();
+        obj.cspeed();
+    </script>
+</head>
+
+</html>

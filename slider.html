@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        ind = 0;
+
+        function ci() {
+            var arr = ["images/3.jpg", "images/2.jpg", "images/1.jpg"];
+            document.getElementById("imm").src = arr[ind];
+            ind++;
+            if (ind == 3) {
+                ind = 0;
+            }
+        }
+
+        function start() {
+            intt = setInterval("ci()", 4000);
+        }
+
+        function stop() {
+            clearInterval(intt);
+        }
+    </script>
+</head>
+
+<body>
+    <img src="images/4.jpg" id="imm" width="75%" height="400">
+    <button name="Start" onclick="start()">Start</button>
+    <button name="Stop" onclick="stop()">Stop</button>
+</body>
+
+</html>

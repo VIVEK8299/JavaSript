@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function clock() {
+            var d = new Date();
+            var data = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ":" + d.getMilliseconds();
+            document.getElementById("A").innerHTML = data;
+        }
+        setInterval("clock()", 1);
+    </script>
+</head>
+
+<body>
+    <h2>Digital Timer</h2>
+    <p id="A"></p>
+</body>
+
+</html>

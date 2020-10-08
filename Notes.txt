@@ -1,0 +1,784 @@
+--> 
+  Mern Stack :- 
+    -> Single Page Application 
+      React Js :- top most technology
+      Angular 
+      Vue Js 
+    -> React Js 
+    -> Node Js (Express Js (API))
+    -> Mongodb
+-> HTml css bootstrap 
+  ->  Javascript (EcmaScript) 
+   -> Core Javascript (ES 5)
+   -> Es 6| 7 
+ -> react js (ES 6)
+ -> typescript (react js)
+ -> Node js 
+ -> Express Js (Web api framework of node js )
+ -> Mongo db 
+ -> Web Application 
+    adminpanel 
+    front end 
+-> javascript :- client side scripting language which is used to apply some dynamic contents in our web page .
+-> client side :- which are execute by the browser eg:
+js , html 
+-> scripting language:- interpriting language (line by line )
+-> animations
+-> event handling 
+-> validations
+-> *** run time DOM Manupulation 
+DOM :- Document Object Model
+  -> element access
+  -> data read from element 
+  -> data render in html element 
+  -> apply styles 
+  -> change the attribute value of element 
+  -> delete element 
+  -> create element 
+-> case sensitive 
+-> extension .js 
+-> <script>--</script>
+  structure : 
+   home.html 
+<!doctype html>
+  <html>
+     <head>
+       <script>
+         jscode 
+       </script>
+       or 
+       <script src="filename.js"></script>
+     </head>
+ </html>
+-> comments :- to describe the code 
+ single :- //
+ multiple :- /*  */
+ html :- <!--   -->
+-> concatenation (+)
+-> Everything in js is Object 
+Display | output 
+-> document.write("---");//display in the browser 
+*** error display in console 
+-> console.log("--");//display in console (debug)
+-> Visual Studio Code (IDE :- Editor)
+
+**** When we execute the js code , the browser js compiler , compile it send the data to browser. 
+  -> chrome :- V8
+  -> Mozilla :- spider monkey 
+-> variable :- 
+ var varname=value;
+ *** rules
+ -> start with [a-zA-Z]
+ -> after it [a-zA-Z0-9_]
+ eg:
+ var empName="anuj";//string 
+ var emp_sal=12345;//number 
+ -> datatype :- allocate at runtime as per the variable value.
+  number ,string , boolean , array , null , object , undefined
+ *** how we find datatype 
+ typeof varname 
+-> operators 
+  arthematic
+  assignment 
+  relational
+  logical
+  comparison 
+   -> 
+     == :- compare only values , if values are compare then it return true.
+     != 
+    === :- when both value and type compare , then true.
+    !==
+    eg:
+    var a=10;//number
+    var b="10";//string 
+   if(a==b) (true)
+   if(a===b) (false)
+ -> *** ternary operator :- subsitute of if else 
+ (exp1 ? true: false)
+ eg:
+   var a=10;
+   var b=5;
+ console.log((a>b ? "A is greater" : "B is greater"))
+-> conditions 
+  if else 
+  if else if else 
+  switch 
+-> looping 
+  for 
+  while 
+  dowhile
+  nested 
+-> array :- hetrogenous data (any type of value)
+ var arr=[23,"anuj",67.89];
+   or 
+ var arr=new Array(23,"anuj",67.89);
+ *** find array size :- arrayname.length 
+ eg:
+ for(i=0;i<arr.length;i++)
+ {
+     //arr[i]
+ } 
+*** forEach :- used only for an array . It give us index as well as value 
+syntex 
+arrayname.forEach(function(value,index)=>
+{
+    //value index 
+})
+eg:
+var arr=[2,3,4,5];
+var sum=0;
+arr.forEach(function(val)
+{
+    console.log(val);
+    sum+=val;
+})
+console.log("The sum of array is "+sum);
+-> function :- reusability 
+define 
+  function add(a,b)
+  {
+      return (a+b);
+  }
+call 
+var sum=add(4,5);
+console.log(add(10,4));
+--> Pop Up Boxes :- 
+ alert("---") :- display in dialoage box 
+ confirm("Do u want to delete?") 
+   ok(true)   cancel(false)
+ prompt() :- to input data at runtime.
+   -> accept value in string 
+    string to integer 
+    parseInt()
+    eval()
+-> Event handling 
+-> DOM Manupulation
+-> form handling 
+-> Intervals 
+---> Objects , prototypes ----
+-> Event handling 
+events      event handler 
+click        onclick
+dblclick
+mouseover 
+mouseout
+keyup
+keydown
+keypress
+blur
+focus
+change
+load
+reload
+submit
+scroll 
+-> Runtime DOM Manupulation 
+  -> How we access any html element by id 
+ document.getElementById("idname")
+     -> how we get data from element (innerHTML)
+     <p id="tar">Hello hw r u</p> 
+
+      var data=document.getElementById("tar").innerHTML
+    -> Update or render data in element (innerHTML)
+document.getElementById("tar").innerHTML="I am fine ! whats abou u"; 
+  -> apply styles at runtime in element
+ document.getElementById("tar").style.color="red"
+  -> How we change the attribute value 
+  document.getElementById("imm").src="path"
+-> Form handling
+-> intervals :-
+   -> setInterval("method()",timeduration) :- to call a function or expression regurally as we mentioned the time interval.
+    eg:
+    intt=setInterval("abc()",4000);
+   -> clearInterval(intervalname);//to stop interval 
+   -> setTimeout("abc",4000) :- only 1 time call 
+-> predefined methods :- array , string , date , math 
+  ***** Advance core javascript  
+   -> Object :- Javascript is object based language.
+      -> It holds multiple values in term of properties and methods.
+      -> Js objects store data in the form of key and value
+    eg:- (Object Literal {})
+    var obj={
+       fname:'sumit',
+       lname:'joshi',
+       fullname:function()
+       {
+         return this.fname+" "+this.lname;
+       }
+    }
+    console.log(obj.fname);//sumit 
+    console.log(obj.fullname());//sumit joshi
+ -> Prototype :- It is a keyword .With the help of it we can add new properties and methods at later stage to a function or object.
+   eg 1: 
+   function abc()
+   {
+     this.name="anuj";
+     this.gender="male";
+   }
+   abc.prototype.age=34;
+  -> 
+    var arr=[2,3,4,5];
+    arr.push(78);
+  -> *** Module Pattern :- to acheived encapsulation.
+      -> Immediately invoked function 
+      eg:
+    var calc=function()
+    {
+       return {
+           add:function(a,b)
+           {
+             return (a+b);
+           },
+           sub:function(a,b)
+           {
+             return (a-b)
+           }
+       }
+    }() //Immediately invoked 
+  console.log(calc.add(12,6));
+  console.log(calc.sub(12,6));
+-->  
+var add=function(num1,num2)
+{
+  res=num1+num2;
+  console.log(res);
+}(4,5) 
+---> Hoisting :- It is a concept or mechanism where variable and function are moved to the top of their scope before code execution.
+  -> variable hoisting 
+  -> function hoisting 
+  eg:
+     a=10;
+     console.log(a);
+     var a;
+     console.log(add(4,5));//9
+     function add(a,b)
+     {
+       return (a+b);
+     }
+ ---> closure :- If inner function access the variables and parameters of outer function, then inner function is called closure(self invoking function).
+ eg:
+ function Outer()
+ {
+   var count=0;
+   function Inner()
+   {
+     count+=1;
+   }
+   return Inner;
+ }
+ var counter=Outer();
+ counter();//1
+ counter();//2
+ counter();//3
+***** It is useful in hiding implementation detail in Javascript.
+*** closure is created when a child function keep the environment of the parent scope even after the parent function has already executed.
+
+**** Es 6 
+let , const ,arrow ,class, inheritance
+spread and rest operators,
+map , reduce and filter 
+modules
+promise 
+-> Install Node js 
+https://nodejs.org/en/download/ (download and install) 
+  -> npm already install (node package manager)
+ -> check node is install or not 
+ open cmd :- node -v 
+
+Es 6 :- Ecma Script 6 
+-> let keyword :- we define define the scope of a variable (local scope) 
+for(let i=0;i<=5;i++)
+{
+    console.log(i);//1 to 5
+}
+console.log(i);//i is not defined
+if(condition)
+{
+  let x=10;
+}
+console.log(x);//x is not defined
+-> constant :- constant is a value that never be changed.
+ const ADMINURL="path";
+ const MAINURL="path";
+ *** can we change the constant value in javascript 
+   we can change in case of array and object 
+
+-> Arrow function :- (=>):- sort and concise code.
+ let add=(a,b)=>
+ {
+    return (a+b);
+ }
+ eg:
+ arr.forEach((val)=>
+ {
+   console.log(val);
+ })
+-> Object Oriented Features 
+   class and inheritance 
+-> 
+  class car 
+  {
+    constructor()
+    {
+      this.speed=30;
+    }
+    acc()
+    {
+      this.speed+=40;
+    }
+    cspeed()
+    {
+      console.log("the speed is "+this.speed);
+    }
+  }
+ const obj=new car;
+ obj.cspeed();
+ obj.acc();
+ obj.cspeed();
+-> inheritance (reusability) (extends)
+ class A //parent
+ {
+   abc()
+   {
+     return "sumit";
+   }
+ }
+ class B extends A //child 
+ {
+    bca()
+    {
+      let x=super.abc();//sumit 
+      console.log(x);
+    }
+ }
+const obj=new B;
+obj.bca();
+-> template literals :- string interpolation (concatinatio) key (backricks ``) 
+eg:
+let a=10;
+let b=20;
+//normal 
+console.log("the sum of "+a+" and "+b+" is "+sum)
+//template literal 
+console.log(`The sum of ${a} and ${b} is ${sum}`);
+-> **** spread vs rest parameter 
+  -> spread (...) :- to spread (copy )the data of current array to new one or function .
+    let arr=[2,3,4];
+    let newArray=[...arr,56,77];//2 3 4 56 77 
+    function add(a,b,c)
+    {
+      return (a+b+c);
+    }
+    let sum=add(...arr);
+  -> rest (...) :- pass n number of arguments in an function 
+  eg:
+   function myaddition(...a)  --> a represent an array
+   {
+     sum=0;
+     a.forEach((val)=>
+     {
+       sum=sum+val;
+     })
+     return sum;
+   }
+   console.log(myaddition(2,3))
+   console.log(myaddition(2,3,5))
+   console.log(myaddition(2,3,5,2,3))
+  **** the rest parameter is the last formal parameter of the function.
+    function abc(...aa,t,g) //error
+    {} 
+    function abc(t,g,...aa)//correct
+    {
+
+    } 
+-> map | filter | reduce 
+ -> map() :- return an array 
+   eg:
+     let arr=[2,3,4];
+     let arrArray=arr.map(val=> val*5);//10 15 20 
+ -> filter() :- return an filter array 
+  eg:
+  let arr=[2,3,4,5,6,7,8];
+  let newArray=arr.filter(val=> val%2==0);//2 4 6 8
+-> reduce() :- return a single value , left to right 
+eg:
+ let arr=[2,3,4,5];
+ let result=arr.reduce((a,c)=>
+ {
+   return (a+c);
+ })
+ console.log(result)
+
+-> react Js 
+  -> introduction 
+  -> dom vs virtual dom 
+  -> installation 
+  -> directory structure 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+

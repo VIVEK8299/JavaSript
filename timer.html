@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function clock() {
+            var d = new Date();
+            var h = d.getHours();
+            if (h > 12) {
+                h = h - 12;
+                var data = h + " : " + d.getMinutes() + " : " + d.getSeconds() + " : " + "PM";
+            } else {
+                var data = h + " : " + d.getMinutes() + " : " + d.getSeconds() + " : " + "AM";
+            }
+            document.getElementById("timer").innerHTML = data;
+        }
+        setInterval("clock()", 1000);
+    </script>
+</head>
+
+<body>
+    <h1>Digital Clock</h1>
+    <h2>The time is : </h2>
+    <p id="timer"></p>
+</body>
+
+</html>

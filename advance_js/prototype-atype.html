@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        // create a custom array method
+        Array.prototype.MySum = function() {
+            sum = 0;
+            this.forEach(function(val) {
+                sum += val;
+            })
+            return sum;
+        }
+
+        var arr = [2, 3, 4, 5];
+        // arr.push(78);    //predefined method
+
+        console.log(arr.MySum());
+    </script>
+</head>
+
+</html>

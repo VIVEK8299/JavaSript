@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function abc() {
+            alert("hello");
+        }
+
+        function conf() {
+            var a = confirm("do you want do delete ?");
+            if (a == true) {
+                document.write("you pressed ok");
+            } else {
+                document.write("you pressed cancel");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="abc()">ABC</button>
+    <button onclick="conf()">Confirm</button>
+</body>
+
+</html>

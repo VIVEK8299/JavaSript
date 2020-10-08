@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function vali() {
+
+            // vali get
+            var nameval = document.getElementById("t1").value;
+            var mobval = document.getElementById("t2").value;
+            // alert(nameval);
+            //reglar expression for name and mobile(regex)
+            var regName = /^[a-z ]+$/;
+            var regMobile = /^[6-9][0-9]{9}$/;
+
+            if (nameval.search(regName) == -1) {
+                alert("only small alphabet allowed");
+                document.getElementById("t1").focus();
+                return false;
+            } else if (mobval.search(regMobile) == -1) {
+                alert("Should start with no.'s between 6-9\nonly numbers from 0-9 allowed");
+                document.getElementById("t2").focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Form Validation</h1>
+    <form method="post" onsubmit="return vali()">
+        name : <input type="text" id="t1" /><br/> mobile : <input type="text" id="t2" /><br/>
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+
+</html>

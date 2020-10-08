@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function abc() {
+            var data = document.getElementById("tar").innerHTML;
+            alert(data);
+        }
+
+        function bca() {
+            var ele = document.getElementById("tar");
+            ele.innerHTML = "I'm good what about you";
+            ele.style.color = "red";
+            ele.style.border = "2px solid green";
+            ele.style.borderRadius = "10px";
+            document.getElementById("imm").src = "images/2.jpg";
+        }
+    </script>
+</head>
+
+<body>
+    <img src="images/1.jpg" height="150" width="300" id="imm" />
+    <p id="tar">hello how are you</p>
+    <button onclick="abc()">Read Data</button>
+    <button onclick="bca()">Change Data</button>
+</body>
+
+</html>

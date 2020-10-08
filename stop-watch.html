@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        count = 0;
+
+        function counter() {
+            count++;
+            document.getElementById("A").innerHTML = count;
+        }
+
+        function start() {
+            intt = setInterval("counter()", 1000);
+        }
+
+        function stop() {
+            clearInterval(intt);
+        }
+
+        function reset() {
+            count = 0;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Stop Watch</h1>
+    <p id="A"></p>
+    <button name="Start" onclick="start()">Start</button>
+    <button name="Stop" onclick="stop()">Stop</button>
+    <button name="Reset" onclick="reset()">Reset</button>
+</body>
+
+</html>
